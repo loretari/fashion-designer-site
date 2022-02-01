@@ -19,8 +19,8 @@
         <div v-for="song in playlist.songs" :key="song.id" class="single-song">
             <div class="details">
                 <h3>{{ song.title }}</h3>
-                <p>{{ song.artist }}</p>
-                <img :src="song.coverUrl">
+                <p class="description">{{ song.artist }}</p>
+                <img class="add-img" :src="song.coverUrl">
             </div>
             <button @click="handleClick(song.id)" v-if="ownerShip">Delete</button>
         </div>
@@ -39,7 +39,7 @@
     import getUser from '../../composables/getUser'
     import { computed } from 'vue'
     import { useRouter }from 'vue-router'
-    import router from "../../router";
+
 
     export default {
         name: "PlaylistDetails",
@@ -85,6 +85,7 @@
         grid-template-columns: 1fr 2fr;
         gap: 80px;
     }
+
     .cover {
         overflow: hidden;
         border-radius: 20px;
@@ -124,10 +125,13 @@
         border-bottom: 1px dashed var(--secondary);
         margin-bottom: 20px;
     }
-    img {
-        max-width: 80%;
-        max-height: 150%;
-        display: block;
+    .add-img {
+        margin: 20px 60px 20px;
+        border-radius: 20px;
+        min-width: 60%;
+        min-height: 70%;
+        max-width: 60%;
+        max-height: 70%;
     }
 
 

@@ -49,7 +49,7 @@
                 })
                 title.value = ''
                 artist.value = ''
-                router.push({ name: 'PlaylistDetails', params: {id: newSong.id }})
+                router.push({ name: 'UserPlaylists', params: {id: newSong.id }})
 
             }
 

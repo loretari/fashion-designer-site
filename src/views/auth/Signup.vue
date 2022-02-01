@@ -14,7 +14,7 @@
     import { ref } from 'vue'
     import useSignup from '../../composables/useSignup'
     import { useRouter } from 'vue-router'
-    import router from "../../router";
+
 
     export default {
         name: "Signup",
