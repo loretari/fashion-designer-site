@@ -1,11 +1,11 @@
 <template>
 <div>
     <form @submit.prevent="handleSubmit">
-        <h4>Create New Playlist</h4>
-        <input type="text" required placeholder="Playlist title" v-model="title">
-        <textarea required placeholder="Playlist description..." v-model="description"></textarea>
-        <!--   upload playlist image         -->
-        <label>Upload playlist cover image</label>
+        <h4>Create New List</h4>
+        <input type="text" required placeholder="List title" v-model="title">
+        <textarea required placeholder="List description..." v-model="description"></textarea>
+        <!--   upload list image         -->
+        <label>Upload cover image</label>
         <input type="file" @change="handleChange">
         <div class="error">{{ fileError }}</div
         >

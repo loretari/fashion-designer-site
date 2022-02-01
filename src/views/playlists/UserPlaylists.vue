@@ -1,7 +1,7 @@
 <template>
     <div class="user-playlists">
-        <h2>My Playlists</h2>
-        <router-link :to="{ name: 'CreatePlaylist' }" class="btn">Create a new Playlist</router-link>
+        <h2>My Designers List</h2>
+        <router-link :to="{ name: 'CreatePlaylist' }" class="btn">Create a new List</router-link>
         <div v-if="playlists">
          <ListView :playlists="playlists"/>
         </div>

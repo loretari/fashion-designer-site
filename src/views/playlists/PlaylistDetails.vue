@@ -10,18 +10,19 @@
             <h2>{{ playlist.title }}</h2>
             <p class="username">Created by {{ playlist.userName }}</p>
             <p class="description">{{ playlist.description }}</p>
-            <button v-if="ownerShip" @click="handleDelete">Delete Playlist</button>
+            <button v-if="ownerShip" @click="handleDelete">Delete List</button>
 
         </div>
 <!-- song list -->
     <div class="song-list">
-        <div v-if="!playlist.songs.length">No songs have been added to this playlist yet.</div>
+        <div v-if="!playlist.songs.length">No designers have been added to this list yet.</div>
         <div v-for="song in playlist.songs" :key="song.id" class="single-song">
             <div class="details">
                 <h3>{{ song.title }}</h3>
                 <p>{{ song.artist }}</p>
+                <img :src="song.coverUrl">
             </div>
-            <button @click="handleClick(song.id)" v-if="ownerShip">delete</button>
+            <button @click="handleClick(song.id)" v-if="ownerShip">Delete</button>
         </div>
 
         <AddSong v-if="ownerShip" :playlist="playlist"/>
@@ -113,6 +114,7 @@
     }
     .description {
         text-align: left;
+        margin-top: 20px;
     }
     .single-song {
         padding: 10px 0;
@@ -122,5 +124,11 @@
         border-bottom: 1px dashed var(--secondary);
         margin-bottom: 20px;
     }
+    img {
+        max-width: 80%;
+        max-height: 150%;
+        display: block;
+    }
+
 
 </style>

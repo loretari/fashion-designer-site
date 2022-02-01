@@ -2,12 +2,12 @@
     <div class="navbar">
         <nav>
             <img src="../assets/Akiniai.jpg">
-            <h1><router-link :to="{ name: 'Home' }">My Music Forever</router-link></h1>
+            <h1><router-link :to="{ name: 'Home' }">My Designers Forever</router-link></h1>
             <div class="links">
                 <div v-if="user">
                     <router-link :to="{ name: 'Home' }">Home</router-link>
-                    <router-link :to="{ name: 'CreatePlaylist' }">Create Playlist</router-link>
-                    <router-link :to="{ name: 'UserPlaylists' }">My Playlists</router-link>
+                    <router-link :to="{ name: 'CreatePlaylist' }">Create List of Designers</router-link>
+                    <router-link :to="{ name: 'UserPlaylists' }">My List</router-link>
                     <span>hi here, {{ user.displayName }}</span>
                     <button @click="handleClick">Logout</button>
                 </div>
